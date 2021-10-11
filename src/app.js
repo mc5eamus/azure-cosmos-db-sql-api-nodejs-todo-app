@@ -29,8 +29,8 @@ const defaultAzureCredential = new DefaultAzureCredential();
 //Todo App:
 const cosmosClient = new CosmosClient({
   endpoint: config.host,
-  aadCredentials: defaultAzureCredential
-  //key: config.authKey
+  //aadCredentials: defaultAzureCredential
+  key: config.authKey
 })
 const taskDao = new TaskDao(cosmosClient, config.databaseId, config.containerId)
 const taskList = new TaskList(taskDao)
