@@ -6,9 +6,10 @@
     "start": "set NODE_TLS_REJECT_UNAUTHORIZED=0 && node ./src/bin/www"
   },
   "dependencies": {
-    "@azure/cosmos": "3.1.0",
+    "@azure/cosmos": "3.14.1",
+    "@azure/identity": "^1.5.2",
     "body-parser": "~1.15.2",
-    "cookie-parser": "~1.4.3",
+    "cookie-parser": "^1.4.5",
     "debug": "~2.2.0",
     "express": "~4.14.0",
     "jade": "~1.11.0",
