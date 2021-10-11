@@ -1,6 +1,6 @@
 // @ts-check
 const CosmosClient = require('@azure/cosmos').CosmosClient
-const DefaultAzureCredential = require('@azure/identity').DefaultAzureCredential
+const { AzureCliCredential, DefaultAzureCredential } = require("@azure/identity");
 const config = require('./config')
 const TaskList = require('./routes/tasklist')
 const TaskDao = require('./models/taskDao')
@@ -25,7 +25,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
-const defaultAzureCredential = new DefaultAzureCredential();
+const defaultAzureCredential = new AzureCliCredential();
 //Todo App:
 const cosmosClient = new CosmosClient({
   endpoint: config.host,
