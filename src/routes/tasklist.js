@@ -21,7 +21,7 @@ class TaskList {
 
     const items = await this.taskDao.find(querySpec);
     res.render("index", {
-      title: "Advanced ToDo List",
+      title: "Advanced ToDo List with managed identity",
       tasks: items
     });
   }
